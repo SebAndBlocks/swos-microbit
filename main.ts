@@ -9,6 +9,9 @@ bluetooth.onBluetoothConnected(function () {
     basic.clearScreen()
 })
 bluetooth.onBluetoothDisconnected(function () {
+    if (true) {
+        BT_Dissconnections += 1
+    }
     basic.showLeds(`
         # . . . #
         . # . # .
@@ -17,9 +20,6 @@ bluetooth.onBluetoothDisconnected(function () {
         # . . . #
         `)
     basic.clearScreen()
-    if (true) {
-        BT_Dissconnections += 1
-    }
 })
 input.onButtonPressed(Button.A, function () {
     basic.showString("" + (StepCounter))
