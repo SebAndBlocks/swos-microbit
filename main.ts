@@ -71,7 +71,7 @@ input.onButtonPressed(Button.B, function () {
         basic.showString("S")
     } else if (input.compassHeading() == 270) {
         basic.showString("W")
-    } else {
+    } else if (input.compassHeading() == 360) {
         basic.showString("?")
         music.playTone(262, music.beat(BeatFraction.Double))
     }
