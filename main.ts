@@ -71,6 +71,8 @@ input.onButtonPressed(Button.B, function () {
         basic.showString("S")
     } else if (input.compassHeading() == 270) {
         basic.showString("W")
+    } else {
+        basic.showString("?")
     }
 })
 input.onGesture(Gesture.Shake, function () {
