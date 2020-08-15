@@ -1,3 +1,21 @@
+devices.onNotified(MesDeviceInfo.IncomingCall, function () {
+    basic.showIcon(IconNames.SmallDiamond)
+    basic.showIcon(IconNames.Diamond)
+    basic.showIcon(IconNames.SmallDiamond)
+    basic.showIcon(IconNames.Diamond)
+    basic.showIcon(IconNames.SmallDiamond)
+    basic.showIcon(IconNames.Diamond)
+    basic.showIcon(IconNames.SmallDiamond)
+    basic.showIcon(IconNames.Diamond)
+    basic.showIcon(IconNames.SmallDiamond)
+    basic.showIcon(IconNames.Diamond)
+    basic.showIcon(IconNames.SmallDiamond)
+    basic.showIcon(IconNames.Diamond)
+    basic.showIcon(IconNames.SmallDiamond)
+    basic.showIcon(IconNames.Diamond)
+    basic.showIcon(IconNames.SmallDiamond)
+    basic.showIcon(IconNames.Diamond)
+})
 bluetooth.onBluetoothConnected(function () {
     basic.showLeds(`
         . . # # .
@@ -42,6 +60,15 @@ input.onButtonPressed(Button.B, function () {
 })
 input.onGesture(Gesture.Shake, function () {
     StepCounter += 1
+})
+devices.onNotified(MesDeviceInfo.IncomingMessage, function () {
+    basic.showLeds(`
+        . # # # .
+        # # # # #
+        # # # # #
+        . # # # .
+        # . . . .
+        `)
 })
 let BT_Dissconnections = 0
 let StepCounter = 0
