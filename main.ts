@@ -29,6 +29,17 @@ input.onButtonPressed(Button.AB, function () {
     basic.showString("" + (BT_Dissconnections))
     basic.clearScreen()
 })
+input.onButtonPressed(Button.B, function () {
+    if (input.compassHeading() == 0) {
+        basic.showString("N")
+    } else if (input.compassHeading() == 90) {
+        basic.showString("E")
+    } else if (input.compassHeading() == 180) {
+        basic.showString("S")
+    } else if (input.compassHeading() == 270) {
+        basic.showString("W")
+    }
+})
 input.onGesture(Gesture.Shake, function () {
     StepCounter += 1
 })
