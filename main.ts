@@ -73,6 +73,7 @@ input.onButtonPressed(Button.B, function () {
         basic.showString("W")
     } else {
         basic.showString("?")
+        music.playTone(262, music.beat(BeatFraction.Double))
     }
 })
 input.onGesture(Gesture.Shake, function () {
