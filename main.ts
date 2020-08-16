@@ -1,31 +1,31 @@
 devices.onNotified(MesDeviceInfo.IncomingCall, function () {
     basic.showIcon(IconNames.SmallDiamond)
-    music.playTone(262, music.beat(BeatFraction.Double))
+    music.playTone(262, music.beat(BeatFraction.Whole))
     basic.showIcon(IconNames.Diamond)
-    music.playTone(294, music.beat(BeatFraction.Double))
+    music.playTone(294, music.beat(BeatFraction.Whole))
     basic.showIcon(IconNames.SmallDiamond)
-    music.playTone(262, music.beat(BeatFraction.Double))
+    music.playTone(262, music.beat(BeatFraction.Whole))
     basic.showIcon(IconNames.Diamond)
     basic.pause(200)
-    music.playTone(294, music.beat(BeatFraction.Double))
+    music.playTone(294, music.beat(BeatFraction.Whole))
     basic.showIcon(IconNames.SmallDiamond)
-    music.playTone(262, music.beat(BeatFraction.Double))
+    music.playTone(262, music.beat(BeatFraction.Whole))
     basic.showIcon(IconNames.Diamond)
-    music.playTone(294, music.beat(BeatFraction.Double))
+    music.playTone(294, music.beat(BeatFraction.Whole))
     basic.showIcon(IconNames.SmallDiamond)
     basic.pause(400)
-    music.playTone(262, music.beat(BeatFraction.Double))
+    music.playTone(262, music.beat(BeatFraction.Whole))
     basic.showIcon(IconNames.Diamond)
-    music.playTone(294, music.beat(BeatFraction.Double))
+    music.playTone(294, music.beat(BeatFraction.Whole))
     basic.showIcon(IconNames.SmallDiamond)
-    music.playTone(262, music.beat(BeatFraction.Double))
+    music.playTone(262, music.beat(BeatFraction.Whole))
     basic.showIcon(IconNames.Diamond)
     basic.pause(200)
-    music.playTone(294, music.beat(BeatFraction.Double))
+    music.playTone(294, music.beat(BeatFraction.Whole))
     basic.showIcon(IconNames.SmallDiamond)
-    music.playTone(262, music.beat(BeatFraction.Double))
+    music.playTone(262, music.beat(BeatFraction.Whole))
     basic.showIcon(IconNames.Diamond)
-    music.playTone(294, music.beat(BeatFraction.Double))
+    music.playTone(294, music.beat(BeatFraction.Whole))
     basic.showIcon(IconNames.SmallDiamond)
     basic.showIcon(IconNames.Diamond)
     basic.showIcon(IconNames.SmallDiamond)
@@ -65,12 +65,13 @@ devices.onGamepadButton(MesDpadButtonInfo.BDown, function () {
         basic.showString("W")
     } else if (input.compassHeading() == 360) {
         basic.showString("?")
-        music.playTone(262, music.beat(BeatFraction.Double))
+        music.playTone(262, music.beat(BeatFraction.Whole))
     }
     basic.clearScreen()
 })
 input.onButtonPressed(Button.A, function () {
     basic.showString("" + (StepCounter))
+    music.playTone(262, music.beat(BeatFraction.Whole))
     basic.clearScreen()
 })
 devices.onGamepadButton(MesDpadButtonInfo.DDown, function () {
@@ -95,7 +96,7 @@ input.onButtonPressed(Button.B, function () {
         basic.showString("W")
     } else if (input.compassHeading() == 360) {
         basic.showString("?")
-        music.playTone(262, music.beat(BeatFraction.Double))
+        music.playTone(262, music.beat(BeatFraction.Whole))
     }
     basic.clearScreen()
 })
@@ -114,8 +115,8 @@ devices.onNotified(MesDeviceInfo.IncomingMessage, function () {
         . # # # .
         # . . . .
         `)
-    music.playTone(262, music.beat(BeatFraction.Double))
-    music.playTone(262, music.beat(BeatFraction.Double))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Whole))
 })
 let BT_Dissconnections = 0
 let StepCounter = 0
