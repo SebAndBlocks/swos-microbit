@@ -13,7 +13,7 @@ devices.onNotified(MesDeviceInfo.IncomingCall, function () {
     basic.showIcon(IconNames.Diamond)
     music.playTone(294, music.beat(BeatFraction.Double))
     basic.showIcon(IconNames.SmallDiamond)
-    basic.pause(200)
+    basic.pause(400)
     music.playTone(262, music.beat(BeatFraction.Double))
     basic.showIcon(IconNames.Diamond)
     music.playTone(294, music.beat(BeatFraction.Double))
@@ -54,8 +54,30 @@ bluetooth.onBluetoothDisconnected(function () {
         `)
     basic.clearScreen()
 })
+devices.onGamepadButton(MesDpadButtonInfo.BDown, function () {
+    if (input.compassHeading() == 0) {
+        basic.showString("N")
+    } else if (input.compassHeading() == 90) {
+        basic.showString("E")
+    } else if (input.compassHeading() == 180) {
+        basic.showString("S")
+    } else if (input.compassHeading() == 270) {
+        basic.showString("W")
+    } else if (input.compassHeading() == 360) {
+        basic.showString("?")
+        music.playTone(262, music.beat(BeatFraction.Double))
+    }
+    basic.clearScreen()
+})
 input.onButtonPressed(Button.A, function () {
     basic.showString("" + (StepCounter))
+    basic.clearScreen()
+})
+devices.onGamepadButton(MesDpadButtonInfo.DDown, function () {
+    basic.showString("Smart Watch OS (SWOS)")
+})
+devices.onGamepadButton(MesDpadButtonInfo.CDown, function () {
+    basic.showString("" + (BT_Dissconnections))
     basic.clearScreen()
 })
 input.onButtonPressed(Button.AB, function () {
@@ -75,6 +97,11 @@ input.onButtonPressed(Button.B, function () {
         basic.showString("?")
         music.playTone(262, music.beat(BeatFraction.Double))
     }
+    basic.clearScreen()
+})
+devices.onGamepadButton(MesDpadButtonInfo.ADown, function () {
+    basic.showString("" + (StepCounter))
+    basic.clearScreen()
 })
 input.onGesture(Gesture.Shake, function () {
     StepCounter += 1
