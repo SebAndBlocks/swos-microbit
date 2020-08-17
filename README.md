@@ -1,5 +1,5 @@
 
-> Open this page at [https://turquiosetnt.github.io/smart-watch-microbit-v1/](https://turquiosetnt.github.io/smart-watch-microbit-v1/)
+> Open this page at [https://turquiosetnt.github.io/swos-microbit](https://turquiosetnt.github.io/swos-microbit/)
 
 ## Use as Extension
 
